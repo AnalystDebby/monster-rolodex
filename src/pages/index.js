@@ -38,13 +38,13 @@ export default function Home() {
       </Head>
       <main className="flex justify-center items-center flex-col ">
         <h1
-          className={`text-teal-400 text-[76px] mb-[50px] mt-16 font-bold ${BigelowRules.className} text-center`}
+          className={`text-teal-400 text-[76px] mb-11 mt-12 font-bold ${BigelowRules.className} text-center`}
         >
           Monsters Rolodex
         </h1>
 
         <input
-          className="border-none leading-[30px] mb-[30px] outline-none p-[10px] w-[150px] rounded-md text-center "
+          className="border-none leading-[30px] mb-[30px] outline-none p-[10px] w-[150px] rounded-md text-center"
           type="search"
           id="search"
           name="search"
@@ -55,9 +55,8 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-0 mx-auto w-[85vw] text-center gap-5 card">
           {filteredMonsters.map((monster) => (
             <div
-              className="bg-[#95dada] border-[1px] border-solid border-gray-600 rounded-md cursor-pointer flex flex-col p-[25px] "
+              className="bg-[#95dada] border-[1px] border-solid border-gray-800 rounded-md cursor-pointer flex flex-col p-[25px] backface-hidden transform duration-500 hover:scale-110  hover:ease-out hover:antialiased"
               key={monster.id}
-              id="card"
             >
               <Image
                 src={`https://robohash.org/${monster.id}?set=set2&`}
